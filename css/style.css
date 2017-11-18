@@ -1,0 +1,20 @@
+body{
+	background-color: #FDF3E7;
+}
+
+p,li{
+	font-family:helvetica;
+	font-size: 16px;
+}
+
+li{
+	border-bottom: 1px solid black;
+}
+
+li:hover{
+	background-color: #D3D3D3;
+}
+
+#premise>li{
+	margin:1%;
+}
