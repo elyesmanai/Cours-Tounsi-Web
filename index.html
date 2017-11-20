@@ -10,9 +10,9 @@
 </head>
 <body>
    <div class="container">
-   			<div class="row">https://web.skype.com/en/</div>
+   			<div class="row"><a href="./sample-eng.html">English Version</a></div>
             <div class="row"><center><h1>Web Development</h1></center></div>
-            <div class="row" >
+            <div class="row" id="preambule" >
             	<h2>0- 9bal manibdew:</h2>
             	<p> 
             	<ol id="premise">
@@ -29,7 +29,7 @@
             	</ol>
             	</p>
             </div>
-            <div class="row">
+            <div class="row" id="ta7dhir">
                 <h2>1- Ta7dhir il projet: </h2><br>
 
                 <p>les étapes hedhom itaba3hom pour n'importe ay projet:</p>
@@ -52,7 +52,7 @@
 				<br>
                 <p> Une fois sar hedha kol  ta3mil drag-and-drop lil dossier te3ik fil éditeur texte te3ik, taw tjik l'hiérarchie ta3 projet te3ik.</p>  
             </div>
-            <div class="row">
+            <div class="row" id="liaisons">
                 <h2>2- liaisons de fichiers : </h2>
                 <p>les étapes hedhom itaba3hom pour n'importe ay projet:
 
@@ -71,7 +71,7 @@
 
                     </ol>
             </div>
-            <div class="row">
+            <div class="row" id="HTML">
             	<h2>3- HTML :</h2>
             	<p>
             		taw najmou nibdew niktbou notre code HTML.
@@ -153,39 +153,210 @@
 				</div>
 					<br><p>le code hedha lkol, yit7t fil &lt;body&gt; &lt;/body&gt;</p>
 					<br><center><img src="res/part5.png" alt=""></center><br>
-
             </div>
-            <div class="row">
+            <div class="row" id="CSS">
             	<h2>4- CSS :</h2>
             	<p></p>
             </div>
-            <div class="row">
+            <div class="row" id="Javascript">
             	<h2>5- JS :</h2>
             	<p>
             		isti3mel JavaScript mahouch dharouri fi les sites webs, ama tse3id ki t7ib trodou animé w yit7arik.
 
             	</p>
             </div>
-             <div class="row">
+            <div class="row" id="Bootstrap">
             	<h2>6- Bootstrap :</h2>
             	<p></p>
             </div>
-             <div class="row">
+            <div class="row" id="JQUERY">
             	<h2>7- JQUERY :</h2>
             	<p></p>
             </div>
-             <div class="row">
+            <div class="row" id="PHP">
             	<h2>8- PHP :</h2>
             	<p>
             		avec HTML, CSS et Javascript, tnajim ta3mil ce qui est appelé "site statique", le problème m3a les sites statiques howa anou lezim inti tiktib kol chay, donc ken 3andik page feha 50 membres, tiktib le code 50 mara.
-            		bich nirte7ou min mochkla
+            		zeda ken t7ib chkoun ya3mil inscription wala yab3ith message min formulaire, mayitsajal chay.
+            		bich nirte7ou mil mechekil edhika, nista3mlou 7aja ismha "back-end", li hiya bich tkhalina nsajlou les informations te3na.
+
+            		Le language back-end li bich nit3almouh ismou PHP, w howa bich ikhalina on communique mabin il site web mte3na wil base de données win fama toutes nos informations.
+
+            		Pour le moment ena en période de devoirs donc najamch niktib le cours complet, donc bich na3tikom il video hedhi tit3almou minha pour le moment, ena bidi t3alamt min houni donc ken itab3ouh oumourkom twali henia. <br><br>
+            		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/qVU3V0A05k8" frameborder="0" allowfullscreen></iframe></center><br>
+            		
+					
                	</p>
             </div>
-             <div class="row">
+            <div class="row" id="SQL">
             	<h2>9- SQL :</h2>
-            	<p></p>
+            	<p>
+            		HTML + CSS + JS ya3mloulna site web. <br>
+            		PHP howa il 9antra mabin site web te3na wil base de donnée. <br>
+            		SQL howa li ikhalina on manipule il base de donnée, howa li bich ikhalina nzidou information, nfaskhou information, nbadlou information, wala juste njiboha w n'affichiwha. <br> <br>
+            		à la base  une base de donnée hiya table Excel kbira, barcha des lignes et des colonnes winti tistakhrij ma3loumet. <br>
+            		Fil SQL 3ana 4 commandes : <br><br>
+
+					<ul>
+						<li>	SELECT - hedhi tistakhrij des informations <br></li>
+						<li>UPDATE - hedhi tmodifie des informations <br></li>
+						<li>INSERT - hedhi tzid des informations <br></li>
+						<li>DELETE - hedhi tfasikh des informations <br></li>
+					</ul>
+
+            		<br><h2>na3mlou exemple :</h2><br>
+
+            		<div class="row">
+	            		<div class="col-lg-7">
+	            			Supposons il tableau li 3al imin howa il base de donnée te3na. <br>
+							ismou "TEAM", fih 3 champs ( 'name' , 'age' , 'location' ), w fih déjà 2 lignes d'informations. <br>
+
+							Si ena 3andi une page Web ismha "The Team", w n7ib j'affiche les membres, alors lezim njib mes informations mil base de donnée, dans ce cas je fais : <br><br>
+
+							<strong>SELECT * FROM Team;</strong> <br><br>
+
+							Il requête SQL hedhi  bich traja3li les informations lkol li fil base de donnée.
+							traja3li donc elyes, 21, Marsa, Hamza, 23, Tunis  wena bil PHP n'affichihom kima n7ib.
+							Ken n7ib  njib info mou3ayna na3ti ism il champ fi 3oudh l'étoile *. <br> <br>
+
+							<strong>SELECT Name,Age From Team  </strong> => traj3ilna Elyes,21,Hamza,23 <br><br>
+
+							il Location maraj3itch, de cette façon je choisis chnaw n7ib njib, w ken n7ib kol chay, n7ot étoile * .<br><br>
+	            		</div>
+	            		<div class="col-lg-offset-1  col-lg-4">
+	            		<br><br><br>
+	            			<table>
+	            			<tr>
+	            				<th>Name</th>
+	            				<th>Age</th>
+	            				<th>Location</th>
+	            			</tr>
+	            			<tr>
+	            				<td>Elyes</td>
+	            				<td>21</td>
+	            				<td>Marsa</td>
+	            			</tr>
+	            			<tr>
+	            				<td>Hamza</td>
+	            				<td>23</td>
+	            				<td>Tunis</td>
+	            			</tr>
+	            		</table><br>
+	            		</div>
+            		</div>
+            		
+					<hr>
+					<br><br>
+					<div class="row">
+						<div class="col-lg-7"><br><br>
+							Ken n7ib nbadil information, exemple nbadil age ta3 elyes, na3mil : <br><br>
+							<strong>UPDATE Age WHERE Name=elyes Set Age=45;</strong><br><br>
+							Age ta3 elyes wala 45, na3mlou nafs chay li ay champs, just badil Set Age bi ay champ ekhir.
+							Il WHERE  hiya li condition te3na,  bich tbadil information mta3 chkoun bidhet? ta3 li Name te3ou howa Elyes. <br><br>
+
+						</div>
+						<div class="col-lg-offset-1 col-lg-4">	
+							<br><table>
+		            			
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Elyes</td>
+		            				<td>45</td>
+		            				<td>Marsa</td>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table><br>
+						</div>
+					</div>
+
+					<br><br><br>
+					<div class="row">
+						<div class="col-lg-7"><br><br>
+							Ken n7ibou nzidou 3abd, na3mlou <br><br>
+
+							<strong>INSERT INTO Team(yosr,20,Tunis);</strong> <br><br>
+
+							Zidna un membre jdid ismou yosr, 3omrou 20 w yoskin fi tounis. <br>
+							****ATTTENTION****** <br>
+							Fil cas hedha l'ordre 3andou dakhl, lezim tu respectes l'ordre des champs, since bdineha avec name ba3d age ba3d location lezim nkamlou keka. <br>
+							****ATTENTION**** <br>
+
+							tawa il base te3na walet haka : <br>
+						</div>
+						
+						<div class="col-lg-offset-1 col-lg-4">
+							<table>
+            			
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Elyes</td>
+		            				<td>21</td>
+		            				<td>Marsa</td>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            			<tr>
+		            				<td>yosr</td>
+		            				<td>20</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table>
+						</div>
+					</div>
+
+					<br><br><br>
+					<div class="row">
+						<div class="col-lg-7">
+							<br>
+
+		            		Ken n7ibou nfaskhou elyes, na3mlou <br><br>
+
+		            		<strong>DELETE FROM TEAM WHERE name=elyes;</strong><br><br>
+
+		            		9olnelou fasikh mil base li ismha TEAM, il 3abd li ismou elyes. donc tawa table walet haka : 
+
+						</div>
+						<div class="col-lg-offset-1 col-lg-4">
+							<table>
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            			<tr>
+		            				<td>yosr</td>
+		            				<td>20</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table>
+
+						</div>
+					</div>
+					
+				
+            	</p>
             </div>
-             <div class="row" id="annexes">
+            <div class="row" id="annexes">
             	<h2>10- Annexes :</h2>
             	<p>Définitions:
 					<ul>
