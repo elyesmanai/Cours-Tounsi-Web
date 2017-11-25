@@ -356,8 +356,119 @@
 				
             	</p>
             </div>
+
+            <div class="row" id="PHP + SQL">
+            	<h2>10- PHP + SQL :</h2>
+            	<p>
+            		tawa ritou il PHP w ritou il SQL,  bich nista3mlou les 2 m3a b3athhom taw : <br>
+
+            		Pour faire cela,  nist7a9ou 7ajtin: <br> <br>
+            			-fichier de configuration base de donnée <br>
+            			-fonctions PHP ta3 base donnée <br>
+
+            		Bich nibdew, ken 3andik projet bditou fih en php ikhdmou fih, sinon  a3mlou dossier jdid w a3mlou fih fichier "index.php"
+            		Rakzou m3a ".php" mouch ".html" khatir le code PHP yikhdimch fi fichier HTML ama code HTML yikhdim fi fichier PHP. <br>
+
+            		donc, fil dossier te3kom tawa 3andkom fichier index.php , na3mlou fi nafs il dossier fichier we7id ekhir ismou "database.php" w na3mlou copier coller fi wistou ta3 le code hedha : <br> 
+
+					<div class="col-lg-offset-3">
+						<small>
+						<?php  <br>
+							class Database<br>
+							{<br>
+							    private static $dbName =  ;<br>
+							    private static $dbHost =  ;<br>
+							    private static $dbUsername = ;<br>
+							    private static $dbUserPassword =  ;<br>
+							     
+							    private static $cont  = null;<br>
+							     
+							    public function __construct() {<br>
+							        die('Init function is not allowed');<br>
+							    }
+							     
+							    public static function connect()<br>
+							    {<br>
+							       // One connection through whole application<br>
+							       if ( null == self::$cont )<br>
+							       {     <br>
+							        try<br>
+							        {<br>
+							          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); <br>
+							        }
+							        catch(PDOException $e)<br>
+							        {<br>
+							          die($e->getMessage()); <br>
+							        }
+							       }
+							       return self::$cont;<br>
+							    }
+							     
+							    public static function disconnect()<br>
+							    {<br>
+							        self::$cont = null;<br>
+							    }<br>
+							    public function display(){<br>
+							    }<br>
+							}?><br>
+					</small>
+					</div>
+					
+					<br><br>
+					hedha il fichier de configuration te3na, ikhalina nconnectiw mil fichier te3na 3al base de donnée win makenit.
+					a7na bich nkhaliwha kima hiya ama nbadlou fi 4 7ajet : <br>
+						<ul>
+							<li>private static $dbName, hedhi n7otouha égale li ism il base de donnée te3na.</li>
+							<li>private static $dbHost, hedhi n7otohuha égale li ism il serveur, ken 3al pc te3na n7otou "localhost", ken 3ala serveur distant ya3tihelik il hébergeur te3ik.</li>
+							<li>private static $dbUsername, username te3ik</li>
+							<li>private static $dbUserPassword, hedhi t7ot feha mot de passe li tconnecti bih.</li>
+						</ul>
+					
+<br>
+					Une fois hedha c'est bon, narj3ou lil index.php te3na. Supposons 3ana fil base de donnée une table ismha "users", wena n7ib lista ta3 esemi il users te3i, nji fil index.php w niktib  le code suivant : <br>
+					<div class="col-lg-offset-3"><br><br>
+						<small>
+							
+							<?php <br>
+							require 'database.php';  <br>
+	                        $pdo = Database::connect();<br>
+	                        $sql = "SELECT * FROM users  ORDER BY name ASC "; : <br>
+	                        foreach ($pdo->query($sql) as $row) {<br>
+	                            echo $row['name'];<br>
+	                        }<br>
+	                        Database::disconnect();<br>
+	                    	?> <br>
+	                    	
+                    	</small><br>
+					
+					</div>
+
+					houni cha3mlna : <br>
+					<ol>
+						<li><?php : kima <code><!DOCTYPE html></code> , hedhi bich t9oul rani nista3mil fil php</li>
+						<li>require 'database.php' : il fichier li ktibneh 9bila, njibouh bich najmou nista3mlouh, ken na3mlouch hedha mayikhdimch code te3na </li>
+						<li>$pdo = Database::connect() : hedhi ya3ni 3malna une connection vers la base de donnée te3na, la fonction utilisée ismha connect() w jibneha mil fichier database.php .   tawa najmou nistghalou les informations li fil base de donnée.</li>
+						<li>$sql = "SELECT * FROM users  ORDER BY name ASC " : houni 7atina la requête SQL te3na li bich tkhalina njibou les informations mil table users li fil base de donnée, w nadhmouhom selon ismhom. </li>
+						<li>foreach ($pdo->query($sql) as $row) { echo $row['name'];} :  houni 9olna li pour chaque résultat nal9awih, donc pour chaque user mawjoud fil base de donnée, iktibli ismou fil site web te3i.</li>
+						<li>Database::disconnect() : hedhi 7atineha filikhir bich nsakrou la connection lil base, na3mloha 3al sécurité w bich tekilch b3athha ken 3ana barcha des appels okhrin.</li>
+
+					</ol><br>
+						
+					En général, kol mara bich tist7a9ou lil base de donnée bich tiktbou NAFS le code, sauf les lignes 4 et 5 win tbadlou la requête w chnaw ta3mlou pour chaque résultat. <br>
+
+					<center><h2>Jarbou taw avec SELECT, INSERT, UPDATE et DELETE. </h2><br></center>
+
+
+					
+            			
+
+
+            		
+
+            	</p>
+            </div>
             <div class="row" id="annexes">
-            	<h2>10- Annexes :</h2>
+            	<h2>11- Annexes :</h2>
             	<p>Définitions:
 					<ul>
 						<li></li>
