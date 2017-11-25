@@ -468,7 +468,26 @@
 					En général, kol mara bich tist7a9ou lil base de donnée bich tiktbou NAFS le code, sauf les lignes 4 et 5 win tbadlou la requête w chnaw ta3mlou pour chaque résultat. <br>
 
 					<center><h2>Jarbou taw avec SELECT, INSERT, UPDATE et DELETE. </h2><br></center>
+							
+							<p>
+								<strong>INSERT :</strong>  <br>
+								$pdo = Database::connect(); <br>
+					            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); <br>
+					            $sql = "INSERT INTO sites (sname) values(?)"; <br>
+					            $q = $pdo->prepare($sql); <br>
+					            $q->execute(array($name)); <br>
+           						Database::disconnect(); <br>
+							</p>
 
+							<p>
+								<strong>DELETE :</strong> <br>
+								    $pdo = Database::connect(); <br>
+							        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>
+							        $sql = "DELETE FROM sites  WHERE sid = ?";<br>
+							        $q = $pdo->prepare($sql);<br>
+							        $q->execute(array($id));<br>
+							        Database::disconnect();<br>
+							</p>
 
 					
             			
