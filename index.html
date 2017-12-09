@@ -536,6 +536,52 @@
             </div>
 
             
+                        
+<p>
+<?php
+session_start();
+$username = $_POST['username'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+
+if (empty($username)) {
+    header("location: index.php?error=empty");
+    exit();}
+
+if (empty($email)) {
+    header("location: index.php?error=empty");
+    exit();}
+if (empty($password)) {
+    header("location: index.php?error=empty");
+    exit();}
+
+//establishing connction to the database
+$conn = mysqli_connect('localhost','root','', 'ged');
+if (!$conn) {die("connection failed:".mysqli_connect_error());}
+
+$sql = "INSERT INTO test (id, name)  
+VALUES ('$id','$username')";
+if (mysqli_query($conn, $sql)) {header("location: index.php?error=success");}
+ else {echo "Error: " . $sql . "<br>" . mysqli_error($conn);}
+
+mysqli_close($conn);
+?>
+
+
+
+//checking if the name already exists
+$sql= "SELECT name FROM users WHERE name='$username'";
+$result= $conn -> query($sql);
+$namecheck = mysqli_num_rows($result);
+if ($namecheck > 0) {
+    header("location: index.php?error=exist");
+    exit();
+}
+
+
+?>
+</p>
 
            
         </div>
